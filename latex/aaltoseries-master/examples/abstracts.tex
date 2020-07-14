@@ -1,0 +1,27 @@
+%% Select the abstracts mode on
+\documentclass[abstracts]{aaltoseries}
+\usepackage[utf8]{inputenc}
+% lipsum generates bullshit
+\usepackage{lipsum}
+% Use english, finnish, and latin
+\usepackage[latin,finnish,english]{babel}
+
+\begin{document}
+
+% The first abstract, you need to use the abstract environment!
+\begin{abstract}% Note, that the abstract language is the document language, i.e. English
+\lipsum[1-3]
+\end{abstract}
+
+% The second abstract, you need to use the abstract environment!
+\begin{abstract}
+\selectlanguage{finnish}% Set the abstract language to finnish (local change)
+\lipsum[1-3]
+\end{abstract}
+
+% The third abstract, you need to use the abstract environment!
+\begin{abstract}[latin]% Set the abstract language to latin (local change)
+\lipsum[1-3]
+\end{abstract}
+
+\end{document}

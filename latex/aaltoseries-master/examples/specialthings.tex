@@ -1,0 +1,255 @@
+\documentclass[draft*,nochapters]{aaltoseries}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\author{Jussi Pekonen, the maintainer of the class}
+\title{Special Text- and Float-Specific Features of the \texttt{aaltoseries} Class}
+
+\newcommand{\lipsum}{%
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat at, tincidunt tristique, libero. Vivamus viverra fermentum felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper elit. Proin fermentum massa ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer non enim. Praesent euismod nunc eu purus. Donec bibendum quam in tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate metus eu enim. Vestibulum pellentesque felis eu massa.
+}
+
+\begin{document}
+
+\draftabstract{%
+The purpose of this document is to illustrate the text- and float-specific features of the \textsf{aaltoseries} class. You should examine this file if you want to find examples of the special features of the class.
+}
+
+\tableofcontents
+
+\clearpage
+
+\section{Abstracts}
+
+Note that abstracts are normally typeset using the Aalto University publication platform. Therefore, the following example should not be used when you write a specific Aalto University publication. However, if you are writing an individual article that will be included in a compiled work (like article collection), then you can use the following example, \emph{it is required} by the editor of the compiled work.
+
+\begin{abstract}
+\lipsum
+
+\lipsum
+\end{abstract}
+
+\noindent% Note, you should not intend here!
+For other publications that the individual articles, use the Aalto University publication platform to typeset the abstract. Yet, for drafting the \textsf{aaltoseries} class provides a command \texttt{\textbackslash draftabstract} (see the beginning of this document) with which the abstract(s) can be drafted. Note that the abstract given in the argument of the \texttt{\textbackslash draftabsract} command is typeset only when the draft mode is set on for the document. In the final publication format, the abstracts \emph{are always typeset using the publication platform}.
+
+On the other hand, you should note that the publication platform does not support special characters, like mathematical and chemical symbols, or special formatting, like bolding. To have such abstracts in your publication, the publication platform allows you to upload the abstract as a PDF document. The \textsf{aaltoseries} class allows the user to generate these PDF documents when you give the class option \texttt{abstracts}. However, in that case the document \emph{cannot} contain other material because the PDF abstracts have a special page size. When you need to typeset these special abstracts, it is \emph{required} that you use the \texttt{abstract} environment. For more information about this feature, see the class documentation.
+
+\section{Footnotes}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.\footnote{A short footnote.} \lipsum
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.\footnote{A long footnote (here, doesn't fit on this page only, therefore it expands to the next page): \lipsum \lipsum} \lipsum
+
+\section{Margin Paragraphs}
+
+Note that margin paragraphs, i.e.\ text typeset to the margin using the \texttt{\textbackslash marginpar} command, are redefined to produce footnotes. This is illustrated below.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.\marginpar{A short margin paragraph. \emph{Note that it is typeset as a footnote!}}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.\marginpar[The optional argument of the \texttt{\textbackslash marginpar} command. \emph{Note that it is typeset as a footnote!}]{The required argument of the \texttt{\textbackslash marginpar} command. \emph{Note that it is typeset as a footnote!}}
+
+\section{Quotes and Quotations}
+
+\subsection{Single-paragraph quotes (the \texttt{quote} environment)}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{quote}
+Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+% Here, the quote has technically two paragraphs, but use it only for single-paragraph quotes.
+Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices.
+\end{quote}
+% Note! No empty line after the \end{quote}, or insert \noindent before the following paragraph!
+\lipsum
+
+\subsection{Multi-paragraph quotes (the \texttt{quotation} environment)}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{quotation}
+Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+% See the difference between the quote and quotation environment outputs.
+Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices.
+\end{quotation}
+% Note! No empty line after the \end{quotation}, or insert \noindent before the following paragraph!
+\lipsum
+
+\section{Verses}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{verse}
+Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+% See the difference between the verse, quote, and quotation environment outputs.
+Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et lectus vestibulum urna fringilla ultrices.
+\end{verse}
+% Note! No empty line after the \end{verse}, or insert \noindent before the following paragraph!
+\lipsum
+
+\section{Lists}
+
+\subsection{Unnumbered lists (the \texttt{itemize} environment)}
+
+\subsubsection{Example of a regular list}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{itemize}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\begin{itemize}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\begin{itemize}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{itemize}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{itemize}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{itemize}
+% Note! No empty line after the \end{itemize}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+
+\subsubsection{Example of single-line lists}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{itemize}
+\setlength{\itemsep}{0mm}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+\item Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{itemize}
+% Note! No empty line after the \end{itemize}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{singleitems}% Special environment
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+\item Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{singleitems}
+% Note! No empty line after the \end{singleitems}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+
+\subsection{Numbered lists (the \texttt{enumerate} environment)}
+
+\subsubsection{Example of a regular list}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{enumerate}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\begin{enumerate}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\begin{enumerate}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{enumerate}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{enumerate}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{enumerate}
+% Note! No empty line after the \end{enumerate}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+
+\subsubsection{Example of single-line lists}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{enumerate}
+\setlength{\itemsep}{0mm}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+\item Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{enumerate}
+% Note! No empty line after the \end{enumerate}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{singleenums}% Special environment
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+\item Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{singleenums}
+% Note! No empty line after the \end{singleenums}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+
+\subsubsection{Example of a continued list}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{enumerate}
+\setlength{\itemsep}{0mm}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+\item Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{enumerate}
+% Note! No empty line after the \end{enumerate}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{enumerate}
+\setlength{\itemsep}{0mm}
+\setcounter{enumi}{2}
+\item Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+\item Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{enumerate}
+% Note! No empty line after the \end{enumerate}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+
+\subsection{Description lists (the \texttt{description} environment)}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+\begin{description}
+\item[Lorem ipsum] dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item[Lorem ipsum] dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item[Lorem ipsum] dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\item[Lorem ipsum] dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis.
+\end{description}
+% Note! No empty line after the \end{description}, or insert \noindent before the following paragraph!
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,  vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris.
+
+\section{Overwide floats}
+
+\lipsum
+
+% Put a figure right here
+\begin{figure}[h]
+\widefigureshift[1]% Set the shift
+\begin{tikzpicture}% Used to draw a gray rectangle
+\fill[gray] (0,0) rectangle (\the\widefigurewidth,3); % The rectangle width will be \widefigurewidth
+\end{tikzpicture}
+\caption{Overwide figure in the middle of a page.}
+\end{figure}
+
+% Note! Insert \noindent before the following paragraph, because it is after a float!
+\noindent\lipsum
+
+% Put a figure to the top of the page
+\begin{figure}[t]
+\widefigureshift[1]% Set the shift
+\begin{tikzpicture}% Used to draw a gray rectangle
+\fill[gray] (0,0) rectangle (\the\widefigurewidth,3); % The rectangle width will be \widefigurewidth
+\end{tikzpicture}
+\caption{Overwide figure in the top of a page.}
+\end{figure}
+
+\lipsum
+
+\lipsum
+
+\begin{figure}[h]
+\widefigureshift[1]% Set the shift
+\begin{tikzpicture}% Used to draw a gray rectangle
+\fill[gray] (0,0) rectangle (\the\widefigurewidth,3); % The rectangle width will be \widefigurewidth
+\end{tikzpicture}
+\caption{Overwide figure in the middle of a page.}
+\end{figure}
+
+% Note! Insert \noindent before the following paragraph, because it is after a float!
+\noindent\lipsum
+
+% Put a figure to the top of the page
+\begin{figure}[t]
+\widefigureshift[1]% Set the shift
+\begin{tikzpicture}% Used to draw a gray rectangle
+\fill[gray] (0,0) rectangle (\the\widefigurewidth,3); % The rectangle width will be \widefigurewidth
+\end{tikzpicture}
+\caption{Overwide figure in the top of a page.}
+\end{figure}
+
+\lipsum
+
+% Add bibliography, one citation style shown
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{dummyarticles/references.bib}
+
+\end{document}

@@ -1,0 +1,45 @@
+%% Select the individual article mode on
+% See the documentation for more information about the available class options
+% If you give option 'draft' or 'draft*', the draft mode is set on
+\documentclass[article]{aaltoseries}
+\usepackage[utf8]{inputenc}
+% lipsum generates bullshit
+\usepackage{lipsum}
+% Uncomment and give the correct language option if you are not writing in English
+%\usepackage[<language>]{babel}
+
+% The author of the article
+\author{John Doe}
+% The affiliation of the author
+\affiliation{John Doe University}
+% The title of the article
+\title{Aalto Series Individual Article Example}
+
+\begin{document}
+%% Here, you can use the \maketitle command in the beginning of the document
+\maketitle
+
+% The article abstract
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+
+% Do not use the \tableofcontents command!
+
+% The article contents
+\section{Level 2 Header}
+\lipsum[1-2]
+\section{Level 2 Header}
+\lipsum[3-4]
+\subsection{Level 3 Header}
+\lipsum[5]
+\subsubsection{Level 4 Header}
+\lipsum[6]
+\subsubsection{Level 4 Header}
+\lipsum[7]
+\subsection{Level 3 Header}
+\lipsum[8]
+\section{Level 2 Header}
+\lipsum[9-10]
+
+\end{document}

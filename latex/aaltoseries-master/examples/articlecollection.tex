@@ -1,0 +1,122 @@
+%% Select the article collection mode on
+% See the documentation for more information about the available class options
+% If you give option 'draft' or 'draft*', the draft mode is set on
+\documentclass[articlecollection]{aaltoseries}
+\usepackage[utf8]{inputenc}
+% lipsum generates bullshit
+\usepackage{lipsum}
+% Uncomment and give the correct language option if you are not writing in English
+%\usepackage[<language>]{babel}
+
+% The editor of the article collection
+\author{Editor}
+% The title of the collection
+\title{Title of the Collection}
+
+\begin{document}
+
+%% The abstract of the collection
+% Use this command!
+\draftabstract{\lipsum[1-3]}
+% If you want to include another abstract for the draft in another language,
+% uncomment and give the language name as the optional argument
+%\draftabstract[<language>]{\lipsum[4-6]}
+
+%% Preface
+% If you write this somewhere else than in Helsinki, use the optional location.
+\begin{preface}%[Optional location (if not defined, Helsinki)]
+\lipsum[1-4]
+\end{preface}
+
+\vskip22pt
+\noindent Examples of references to the individual articles:
+\begin{enumerate}
+\item ''\refart{article1}`` by \refartauth{article1} from page \pageref{article1} on\ldots
+\item \refartauth{article2} also wrote ''\ref{article2}``\ldots
+\item ''\ra{article3}`` by \refartauth{article3}
+\item \refartauth{article5} writes in \refart[page NN]{article5} (\ra{article5}) that\ldots
+\item In \ra[in Section 1]{article6}, \refartauth{article6} states that\ldots
+\end{enumerate}
+
+%% Table of contents of the whole article collection
+\tableofcontents
+
+%% The first article
+\author[John Smith and John Doe]{John Smith\aff{1} and John Doe\aff{2}}
+\affiliation{\aff{1}John Smith University\newline
+\aff{2}John Doe University}
+\title{Written directly to the document}
+
+% The article title
+\maketitle[article1]
+
+% The article abstract
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+
+% The article contents
+\section{Level 2 Header}
+\lipsum[1-2]
+
+\section{Level 2 Header}
+\lipsum[3-4]
+\subsection{Level 3 Header}
+\lipsum[5]
+\subsubsection{Level 4 Header}
+\lipsum[6]
+\subsubsection{Level 4 Header}
+\lipsum[7]
+\subsection{Level 3 Header}
+\lipsum[8]
+\section{Level 2 Header}
+\lipsum[9-10]
+
+Let's introduce references to the second article of the collection: ''\refart{article2}`` is written by \refartauth{article2}.
+
+%% The second article
+\author[John Doe and John Smith]{John Doe\aff{1}, John Smith\aff{2}}
+\affiliation{\aff{1}John Doe University\newline
+\aff{2}John Smith University}
+\title{Written directly to the document, part 2}
+
+% The article title, give the article a label
+\maketitle[article2]
+
+% The article abstract
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+
+% The article contents
+\section{Level 2 Header}
+\lipsum[1-2]
+\section{Level 2 Header}
+\lipsum[3-4]
+\subsection{Level 3 Header}
+\lipsum[5]
+\subsubsection{Level 4 Header}
+\lipsum[6]
+\subsubsection{Level 4 Header}
+\lipsum[7]
+\subsection{Level 3 Header}
+\lipsum[8]
+
+%% The third article, a PDF article, no need to shorten the title or the author list
+\addpdfarticle{dummyarticles/dummypdfarticle1.pdf}{article3}{A4-sized PDF article, bad margins}{John Doe}{}{}
+
+%% The fourth article, a PDF article, let's shorten the title a bit
+\addpdfarticle{dummyarticles/dummypdfarticle2.pdf}{article4}{Letter-sized PDF article, bad margins}{John Doe and John Smith}{Letter-sized example}{}
+
+%% The fifth article, a PDF article
+\addpdfarticle{dummyarticles/dummypdfarticle3.pdf}{article5}{Another A4-sized PDF example}{John Doe}{}{}
+
+%% The sixth article, typeset in LaTeX, included as the source code
+% The source code does not define the author(s), the author affililation(s), or the title, and it doesn't include the \maketitle command
+\author{John Doe}
+\affiliation{John Doe University}
+\title{Article typeset in \LaTeX, included to the main document}
+\maketitle[article6]
+\input{dummyarticles/dummytexarticle.tex}
+
+\end{document}

@@ -1,0 +1,48 @@
+%% Select the working paper mode on and do not use chapters
+% See the documentation for more information about the available class options
+% If you give option 'draft' or 'draft*', the draft mode is set on
+\documentclass[workingpaper,nochapters]{aaltoseries}
+\usepackage[utf8]{inputenc}
+% Lipsum package generates bullshit
+\usepackage{lipsum}
+% Uncomment and give the correct language option if you are not writing in English
+%\usepackage[<language>]{babel}
+
+% The authors of the report
+\author{John Doe and John Smith}
+% The title of the report
+\title{The Title of the Report}
+
+\begin{document}
+
+\tableofcontents
+
+\section{Level 2 Header}
+
+\lipsum[1-3]
+
+\section{Level 2 Header}
+
+\lipsum[4]
+
+\subsection{Level 3 Header}
+
+\lipsum[5-6]
+
+\subsubsection{Level 4 Header}
+
+\lipsum[7]
+
+\subsubsection{Level 4 Header}
+
+\lipsum[8]
+
+\subsection{Level 3 Header}
+
+\lipsum[9-10]
+
+\section{Level 2 Header}
+
+\lipsum[11-12]
+
+\end{document}

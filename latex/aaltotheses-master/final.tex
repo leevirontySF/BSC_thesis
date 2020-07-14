@@ -1,0 +1,593 @@
+%%
+%%  AaltoTheses - LaTeX-tutkielmapohjat Aalto-tyylille
+%%
+%%  Hannu Tiitu
+%%  hannu@tiitu.fi
+%%
+\begin{filecontents*}{\jobname.xmpdata}
+  \Title{Towards proper errors! The errors and their interpretation in automatically assessed exercises in mathematics}
+  \Author{Hannu Tiitu}
+  \Keywords{learning environment\sep pedagogical usability\sep error classification\sep automated assessment\sep teaching mathematics\sep STACK}
+  \Publisher{Aalto University}
+\end{filecontents*}
+\documentclass[oneside,pdfa]{aaltoseries}
+\makeatletter
+\@ifpackageloaded{inputenc}{%
+  \inputencoding{utf8}}{%
+  \usepackage[utf8]{inputenc}}
+\hypersetup{hidelinks}                % Linkkien korostus pois
+\makeatother
+\usepackage[finnish,english]{babel}   % Kieli on englanti, tiivistelmässä suomi
+\usepackage{setspace}                 % Rivivälin säätämiseksi
+\usepackage{afterpage}                % Sivun taustaväri
+\microtypesetup{letterspace=25}       % Kannen harvaan välistykseen
+
+
+
+\author{Hannu Tiitu}
+\title{Towards proper errors! The errors and their interpretation in automatically assessed exercises in mathematics}
+
+\begin{document}
+
+
+
+%%  KANSI  ---------------------------------------------
+
+\thispagestyle{empty}
+\setcounter{page}{0}  % Kansisivulle sivunumero 0
+
+% Kansisivun marginaalit
+\newgeometry{left=23.2mm,right=23.2mm,top=13.5mm,bottom=18mm}
+
+% Sininen kansisivu
+\pagecolor{aaltoBlue}\afterpage{\nopagecolor}
+{\color{black}  % Musta teksti
+
+{\parindent0pt % Kappaleiden sisennys pois päältä
+{\fontsize{11.9pt}{11.9pt}\bfseries\sffamily\lsstyle Master's Programme in Mathematics and Operations Research}
+
+\color{white}  % Valkoinen teksti alkaa
+
+\vspace{13.1mm}
+
+\begin{spacing}{3.1}
+{\fontsize{35}{35}\selectfont Towards proper errors!}
+\end{spacing}
+
+\vspace{2.2mm}
+
+\begin{spacing}{1.24}
+{\fontsize{14pt}{14pt}\bfseries\sffamily\lsstyle The errors and their interpretation in automatically\\assessed exercises in mathematics}
+\end{spacing}
+
+\vspace{7.2mm}
+
+\rule{\textwidth}{1.25pt}
+
+\vspace{8.5mm}
+
+{\fontsize{13.9pt}{13.9pt}\bfseries\sffamily\lsstyle Hannu Tiitu}
+
+\vfill
+
+\begin{picture}(0,0)
+\put(356,-7.8){\bfseries\sffamily\footnotesize\lsstyle FINAL}
+\put(356,-17.4){\bfseries\sffamily\footnotesize\lsstyle PROJECT}
+\put(346,-26.5){\rule{.75pt}{25pt}}
+\end{picture}
+
+\AaltoLogoSmall{.66}{?}{white}
+
+} % Kappaleiden sisennys takaisin käyttöön
+} % Valkoisen tekstin pääätös
+
+
+
+%%  NIMIÖSIVU  -----------------------------------------
+
+\newpage
+
+\pagenumbering{roman}
+
+% Nimiösivun marginaalit
+\newgeometry{left=80.7mm,right=25mm,top=12.9mm,bottom=21mm}
+
+\thispagestyle{empty}
+
+{\parindent0pt % Kappaleiden sisennys pois päältä
+\begin{spacing}{1.1}
+\hspace{-39.1mm}{\fontsize{10.5pt}{10.5pt}\sffamily\lsstyle Aalto University}
+
+\hspace{-39.1mm}{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle FINAL PROJECT} {\sffamily\lsstyle 2017}
+\end{spacing}
+
+\vspace{12.7mm}
+
+\begin{spacing}{1.63}
+{\fontsize{17.8pt}{17.8pt}\selectfont Towards proper errors!}
+\end{spacing}
+
+\vspace{10.5mm}
+
+\begin{spacing}{1.2}
+{\fontsize{13pt}{13pt}\selectfont The errors and their interpretation\\in automatically assessed exercises\\in mathematics}
+\end{spacing}
+
+\vspace{10.6mm}
+
+{\fontsize{13.9pt}{13.9pt}\bfseries\sffamily\lsstyle Hannu Tiitu}
+
+\vfill
+
+{\fontsize{10.3pt}{10.3pt}\sffamily\lsstyle\raggedright
+\begin{spacing}{1.06}
+
+Thesis submitted in partial fulfillment of the requirements for the
+degree of Master of Science in Technology.
+
+Otaniemi, 27 Nov 2017
+
+\begin{tabbing}
+Supervisor:\hspace{6mm} \= professor Lauri Malmi \\
+Advisor: \> docent Jarmo Malinen
+\end{tabbing}
+\vspace{-4mm}
+\end{spacing}
+} % fontsize
+
+\vspace{11.5mm}
+
+\begin{spacing}{.9}
+{\bfseries\sffamily\lsstyle Aalto University \\
+School of Science \\
+Master's Programme in Mathematics and\\Operations Research}
+\end{spacing}
+} % Kappaleiden sisennys takaisin käyttöön
+
+
+
+%%  ABSTRACT  ------------------------------------------
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+
+% Tiivistelmien marginaalit
+\newgeometry{left=41.8mm,right=25mm,top=14.33mm,bottom=27mm}
+% Alkuperäisessä Aalto-sarjassa marginaalit ovat suunnilleen näin:
+%\newgeometry{left=41.8mm,right=17.6mm,top=14.33mm,bottom=20.4mm}
+
+\begin{spacing}{.88}
+
+{\parindent0pt % Kappaleiden sisennys pois päältä
+\AaltoLogoSmall{.625}{''}{aaltoBlack}
+
+{\fontsize{13.9pt}{13.9pt}\selectfont
+\vspace{-8.9mm}\hfill{\bfseries\sffamily\lsstyle Abstract}}
+
+{\fontsize{9.48pt}{9.48pt}\selectfont
+\vspace{.9mm}\hfill{\bfseries\sffamily\lsstyle Aalto University, P.O. Box 11000, FI-00076 Aalto~~\textcolor{aaltoGray}{www.aalto.fi}}}
+
+\vspace{7.8mm}{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Author}\\
+{\small Hannu Tiitu}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Title}\\
+\parbox[t]{\textwidth}{\raggedright\small Towards proper errors! The errors and their interpretation in automatically assessed exercises in mathematics}
+
+\vspace{.5mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle School}~~{\small School of Science}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Master's programme}~~{\small Mathematics and Operations Research}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Major}~~{\small Mathematics}\hfill{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Code}~~{\small SCI3054}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Supervisor}~~{\small professor Lauri Malmi}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Advisor}~~{\small docent Jarmo Malinen}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Level}~~{\small Master's thesis}\hfill{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Date}~~{\small 27 Nov 2017}\hfill{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Pages}~~{\small 70}\hfill{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Language}~~{\small English}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+\vspace{6mm}
+
+} % Kappaleiden sisennys takaisin käyttöön
+\end{spacing}
+\begin{spacing}{1.05}
+
+\noindent{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Abstract}
+\vspace{.8mm}
+
+{\small
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus
+  elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur
+  dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer
+  id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque
+  habitant morbi tristique senectus et netus et malesuada fames ac
+  turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla
+  et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus
+  sit amet tortor gravida placerat. Integer sapien est, iaculis in,
+  pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices
+  bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar
+  at, mollis ac, nulla. Curabitur auctor semper nulla.  Donec varius
+  orci eget risus. Duis nibh mi, congue eu, accumsan eleifend,
+  sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+  Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel,
+  wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at,
+  lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed
+  accumsan bibendum, erat ligula aliquet magna, vitae ornare odio
+  metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut
+  massa. Cras nec ante. Pellentesque a nulla.  Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus
+  mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum
+  turpis. Pellentesque cursus luctus mauris.
+
+  Nulla malesuada porttitor diam. Donec felis erat, congue non,
+  volutpat at, tincidunt tristique, libero. Vivamus viverra fermentum
+  felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper
+  elit. Proin fermentum massa ac quam. Sed diam turpis, molestie
+  vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum
+  ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit
+  ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
+  nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer
+  non enim. Praesent euismod nunc eu purus.  Donec bibendum quam in
+  tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate
+  metus eu enim. Vestibulum pellentesque felis eu massa.
+}
+
+\vfill
+
+\end{spacing}
+\begin{spacing}{.88}
+{\parindent0pt % Kappaleiden sisennys pois päältä
+
+\makebox[19mm][l]{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Keywords}\parbox[t]{123.6mm}{\raggedright\small learning environment, pedagogical usability, error classification, automated assessment, teaching mathematics, STACK}
+
+\vspace{.5mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle urn}~~{\small http://urn.fi/URN:NBN:fi:aalto-201712188201}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+} % Kappaleiden sisennys takaisin käyttöön
+\end{spacing}
+
+
+
+%%  TIIVISTELMÄ  ---------------------------------------
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Tiivistelmä}
+
+% Tiivistelmäsivu suomeksi
+\selectlanguage{finnish}
+
+\begin{spacing}{.88}
+
+{\parindent0pt % Kappaleiden sisennys pois päältä
+\AaltoLogoSmall{.625}{!}{aaltoBlack}
+
+{\fontsize{13.9pt}{13.9pt}\selectfont
+\vspace{-8.9mm}\hfill{\bfseries\sffamily\lsstyle Tiivistelmä}}
+
+{\fontsize{9.48pt}{9.48pt}\selectfont
+\vspace{.9mm}\hfill{\bfseries\sffamily\lsstyle Aalto-yliopisto, PL 11000, 00076 Aalto~~\textcolor{aaltoGray}{www.aalto.fi}}}
+
+\vspace{7.8mm}{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Tekijä}\\
+{\small Hannu Tiitu}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Työn nimi}\\
+\parbox[t]{\textwidth}{\raggedright\small Oikeisiin virheisiin! Virheelliset vastaukset ja niiden tulkinta automaattisesti tarkastetuissa matematiikan harjoitustehtävissä}
+
+\vspace{.5mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Korkeakoulu}~~{\small Perustieteiden korkeakoulu}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Maisteriohjelma}~~{\small Matematiikka ja operaatiotutkimus}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Pääaine}~~{\small Matematiikka}\hfill{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Koodi}~~{\small SCI3054}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Valvoja}~~{\small professori Lauri Malmi}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Ohjaaja}~~{\small dosentti Jarmo Malinen}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Työn laji}~~{\small Diplomityö}\hfill{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Päiväys}~~{\small 27.11.2017}\hfill{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Sivuja}~~{\small 70}\hfill{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Kieli}~~{\small englanti}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+\vspace{6mm}
+
+} % Kappaleiden sisennys takaisin käyttöön
+\end{spacing}
+\begin{spacing}{1.05}
+
+\noindent{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Tiivistelmä}
+\vspace{.8mm}
+
+{\small
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus
+  elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur
+  dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer
+  id, vulputate a, magna. Donec vehicula augue eu neque. Pellentesque
+  habitant morbi tristique senectus et netus et malesuada fames ac
+  turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla
+  et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus
+  sit amet tortor gravida placerat. Integer sapien est, iaculis in,
+  pretium quis, viverra ac, nunc. Praesent eget sem vel leo ultrices
+  bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar
+  at, mollis ac, nulla. Curabitur auctor semper nulla.  Donec varius
+  orci eget risus. Duis nibh mi, congue eu, accumsan eleifend,
+  sagittis quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+  Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel,
+  wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at,
+  lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed
+  accumsan bibendum, erat ligula aliquet magna, vitae ornare odio
+  metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut
+  massa. Cras nec ante. Pellentesque a nulla.  Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus
+  mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum
+  turpis. Pellentesque cursus luctus mauris.
+
+  Nulla malesuada porttitor diam. Donec felis erat, congue non,
+  volutpat at, tincidunt tristique, libero. Vivamus viverra fermentum
+  felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper
+  elit. Proin fermentum massa ac quam. Sed diam turpis, molestie
+  vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum
+  ligula, eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit
+  ligula feugiat magna. Nunc eleifend consequat lorem. Sed lacinia
+  nulla vitae enim. Pellentesque tincidunt purus vel magna. Integer
+  non enim. Praesent euismod nunc eu purus.  Donec bibendum quam in
+  tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate
+  metus eu enim. Vestibulum pellentesque felis eu massa.
+}
+
+\vfill
+
+\end{spacing}
+\begin{spacing}{.88}
+{\parindent0pt % Kappaleiden sisennys pois päältä
+
+\makebox[21mm][l]{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle Avainsanat}\parbox[t]{121.6mm}{\raggedright\small oppimisympäristö, pedagoginen käytettävyys, virheluokittelu, automaattinen tarkastaminen, matematiikan opetus, Stack}
+
+\vspace{.5mm}\rule{\textwidth}{.75pt}
+
+{\fontsize{10.5pt}{10.5pt}\bfseries\sffamily\lsstyle urn}~~{\small http://urn.fi/URN:NBN:fi:aalto-201712188201}
+
+\vspace{-2.4mm}\rule{\textwidth}{.75pt}
+
+} % Kappaleiden sisennys takaisin käyttöön
+\end{spacing}
+
+\selectlanguage{english}  % Palataan englantiin
+\restoregeometry  % Palataan normaaleihin sivumarginaaleihin
+
+
+
+%%  SISÄLTÖ  -------------------------------------------
+
+\newpage
+
+\tableofcontents
+
+%%  TYÖ ALKAA TÄSTÄ  -----------------------------------
+
+\newpage
+
+\pagenumbering{arabic}
+
+\chapter{Lorem ipsum}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus
+elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur
+dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id,
+vulputate a, magna. Donec vehicula augue eu neque. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla
+et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit
+amet tortor gravida placerat. Integer sapien est, iaculis in, pretium
+quis, viverra ac, nunc. Praesent eget sem vel leo ultrices
+bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar
+at, mollis ac, nulla. Curabitur auctor semper nulla.  Donec varius
+orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis
+quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel,
+wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at,
+lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed
+accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus
+a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut
+massa. Cras nec ante. Pellentesque a nulla.  Cum sociis natoque
+penatibus et magnis dis parturient montes, nascetur ridiculus
+mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum
+turpis. Pellentesque cursus luctus mauris.
+
+Nulla malesuada porttitor diam. Donec felis erat, congue non, volutpat
+at, tincidunt tristique, libero. Vivamus viverra fermentum
+felis. Donec nonummy pellentesque ante. Phasellus adipiscing semper
+elit. Proin fermentum massa ac quam. Sed diam turpis, molestie vitae,
+placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula,
+eleifend at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula
+feugiat magna. Nunc eleifend consequat lorem. Sed lacinia nulla vitae
+enim. Pellentesque tincidunt purus vel magna. Integer non
+enim. Praesent euismod nunc eu purus.  Donec bibendum quam in
+tellus. Nullam cursus pulvinar lectus. Donec et mi. Nam vulputate
+metus eu enim. Vestibulum pellentesque felis eu massa.
+
+Quisque ullamcorper placerat ipsum. Cras nibh. Morbi vel justo vitae
+lacus tincidunt ultrices. Lorem ipsum dolor sit amet, consectetuer
+adipiscing elit. In hac habitasse platea dictumst. Integer tempus
+convallis augue. Etiam facilisis. Nunc elementum fermentum
+wisi. Aenean placerat.  Ut imperdiet, enim sed gravida sollicitudin,
+felis odio placerat quam, ac pulvinar elit purus eget enim. Nunc vitae
+tortor. Proin tempus nibh sit amet nisl. Vivamus quis tortor vitae
+risus porta vehicula.
+
+\section{Fusce mauris}
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a
+faucibus semper, leo velit ultricies tellus, ac venenatis arcu wisi
+vel nisl.  Vestibulum diam. Aliquam pellentesque, augue quis sagittis
+posuere, turpis lacus congue quam, in hendrerit risus eros eget
+felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum
+porttitor. Nulla facilisi.  Sed a turpis eu lacus commodo
+facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus
+sagittis dui, et vehicula libero dui cursus dui. Mauris tempor ligula
+sed lacus. Duis cursus enim ut augue. Cras ac magna.  Cras
+nulla. Nulla egestas. Curabitur a leo. Quisque egestas wisi eget
+nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+
+Suspendisse vel felis. Ut lorem lorem, interdum eu, tincidunt sit
+amet, laoreet vitae, arcu. Aenean faucibus pede eu ante. Praesent enim
+elit, rutrum at, molestie non, nonummy vel, nisl. Ut lectus eros,
+malesuada sit amet, fermentum eu, sodales cursus, magna. Donec eu
+purus. Quisque vehicula, urna sed ultricies auctor, pede lorem egestas
+dui, et convallis elit erat sed nulla. Donec luctus. Curabitur et
+nunc. Aliquam dolor odio, commodo pretium, ultricies non, pharetra in,
+velit. Integer arcu est, nonummy in, fermentum faucibus, egestas vel,
+odio.
+
+\subsection{Sed commodo posuere pede}
+
+Sed commodo posuere pede. Mauris ut est. Ut quis purus. Sed ac odio.
+Sed vehicula hendrerit sem. Duis non odio. Morbi ut dui. Sed accumsan
+risus eget odio. In hac habitasse platea dictumst. Pellentesque non
+elit.  Fusce sed justo eu urna porta tincidunt. Mauris felis odio,
+sollicitudin sed, volutpat a, ornare ac, erat. Morbi quis dolor. Donec
+pellentesque, erat ac sagittis semper, nunc dui lobortis purus, quis
+congue purus metus ultricies tellus. Proin et quam. Class aptent
+taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+hymenaeos. Praesent sapien turpis, fermentum vel, eleifend faucibus,
+vehicula eu, lacus.
+
+Pellentesque habitant morbi tristique senectus et netus et malesuada
+fames ac turpis egestas. Donec odio elit, dictum in, hendrerit sit
+amet, egestas sed, leo. Praesent feugiat sapien aliquet odio. Integer
+vitae justo.  Aliquam vestibulum fringilla lorem. Sed neque lectus,
+consectetuer at, consectetuer sed, eleifend ac, lectus. Nulla
+facilisi. Pellentesque eget lectus. Proin eu metus. Sed porttitor. In
+hac habitasse platea dictumst. Suspendisse eu lectus. Ut mi mi,
+lacinia sit amet, placerat et, mollis vitae, dui. Sed ante tellus,
+tristique ut, iaculis eu, malesuada ac, dui. Mauris nibh leo,
+facilisis non, adipiscing quis, ultrices a, dui.
+
+\subsection{Morbi luctus}
+
+Morbi luctus, wisi viverra faucibus pretium, nibh est placerat odio,
+nec commodo wisi enim eget quam. Quisque libero justo, consectetuer a,
+feugiat vitae, porttitor eu, libero. Suspendisse sed mauris vitae elit
+sollicitudin malesuada. Maecenas ultricies eros sit amet ante. Ut
+venenatis velit. Maecenas sed mi eget dui varius euismod. Phasellus
+aliquet volutpat odio. Vestibulum ante ipsum primis in faucibus orci
+luctus et ultrices posuere cubilia Curae; Pellentesque sit amet pede
+ac sem eleifend consectetuer. Nullam elementum, urna vel imperdiet
+sodales, elit ipsum pharetra ligula, ac pretium ante justo a
+nulla. Curabitur tristique arcu eu metus. Vestibulum lectus. Proin
+mauris. Proin eu nunc eu urna hendrerit faucibus. Aliquam auctor, pede
+consequat laoreet varius, eros tellus scelerisque quam, pellentesque
+hendrerit ipsum dolor sed augue. Nulla nec lacus.
+
+Suspendisse vitae elit. Aliquam arcu neque, ornare in, ullamcorper
+quis, commodo eu, libero. Fusce sagittis erat at erat tristique
+mollis. Maecenas sapien libero, molestie et, lobortis in, sodales
+eget, dui. Morbi ultrices rutrum lorem. Nam elementum ullamcorper
+leo. Morbi dui. Aliquam sagittis. Nunc placerat. Pellentesque
+tristique sodales est. Maecenas imperdiet lacinia velit. Cras non
+urna. Morbi eros pede, suscipit ac, varius vel, egestas non,
+eros. Praesent malesuada, diam id pretium elementum, eros sem dictum
+tortor, vel consectetuer odio sem sed wisi.
+
+\section{Sed feugiat}
+
+Sed feugiat. Cum sociis natoque penatibus et magnis dis parturient
+montes, nascetur ridiculus mus. Ut pellentesque augue sed
+urna. Vestibulum diam eros, fringilla et, consectetuer eu, nonummy id,
+sapien. Nullam at lectus. In sagittis ultrices mauris. Curabitur
+malesuada erat sit amet massa. Fusce blandit. Aliquam erat
+volutpat. Aliquam euismod. Aenean vel lectus. Nunc imperdiet justo nec
+dolor.
+
+Etiam euismod. Fusce facilisis lacinia dui. Suspendisse potenti. In mi
+erat, cursus id, nonummy sed, ullamcorper eget, sapien. Praesent
+pretium, magna in eleifend egestas, pede pede pretium lorem, quis
+consectetuer tortor sapien facilisis magna. Mauris quis magna varius
+nulla scelerisque imperdiet. Aliquam non quam. Aliquam porttitor quam
+a lacus.  Praesent vel arcu ut tortor cursus volutpat. In vitae pede
+quis diam bibendum placerat. Fusce elementum convallis neque. Sed
+dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec
+dui quis leo sagittis commodo.
+
+
+
+%%  LIITTEET  ------------------------------------------
+
+\appendix
+
+\chapter{Ut purus elit}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus
+elit, vestibulum ut, placerat ac, adipiscing vitae, felis. Curabitur
+dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id,
+vulputate a, magna. Donec vehicula augue eu neque. Pellentesque
+habitant morbi tristique senectus et netus et malesuada fames ac
+turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla
+et lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit
+amet tortor gravida placerat. Integer sapien est, iaculis in, pretium
+quis, viverra ac, nunc. Praesent eget sem vel leo ultrices
+bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu, pulvinar
+at, mollis ac, nulla. Curabitur auctor semper nulla.  Donec varius
+orci eget risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis
+quis, diam. Duis eget orci sit amet orci dignissim rutrum.
+
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel,
+wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at,
+lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed
+accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus
+a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut
+massa. Cras nec ante. Pellentesque a nulla.  Cum sociis natoque
+penatibus et magnis dis parturient montes, nascetur ridiculus
+mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum
+turpis. Pellentesque cursus luctus mauris.
+
+\section{Fusce mauris}
+
+Fusce mauris. Vestibulum luctus nibh at lectus. Sed bibendum, nulla a
+faucibus semper, leo velit ultricies tellus, ac venenatis arcu wisi
+vel nisl.  Vestibulum diam. Aliquam pellentesque, augue quis sagittis
+posuere, turpis lacus congue quam, in hendrerit risus eros eget
+felis. Maecenas eget erat in sapien mattis porttitor. Vestibulum
+porttitor. Nulla facilisi.  Sed a turpis eu lacus commodo
+facilisis. Morbi fringilla, wisi in dignissim interdum, justo lectus
+sagittis dui, et vehicula libero dui cursus dui. Mauris tempor ligula
+sed lacus. Duis cursus enim ut augue. Cras ac magna.  Cras
+nulla. Nulla egestas. Curabitur a leo. Quisque egestas wisi eget
+nunc. Nam feugiat lacus vel est. Curabitur consectetuer.
+
+\end{document}
