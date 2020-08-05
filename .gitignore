@@ -3,3 +3,6 @@
 /aki-gh
 
 /matplotlib
+
+.ipynp_checkpoints/
+.DS_Store
