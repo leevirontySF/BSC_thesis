@@ -1088,6 +1088,7 @@ class Prophet(object):
             type) and y, the time series. If self.growth is 'logistic', then
             df must also have a column cap that specifies the capacity at
             each ds.
+        prepare_df: If false will try to skip changing d
         kwargs: Additional arguments passed to the optimizing or sampling
             functions in Stan.
 
@@ -1101,13 +1102,12 @@ class Prophet(object):
         if ('ds' not in df) or ('y' not in df):
             raise ValueError(
                 'Dataframe must have columns "ds" and "y" with the dates and '
-                'values respectively.'
+                'values reaspectively.'
             )
         history = df[df['y'].notnull()].copy()
         if history.shape[0] < 2:
             raise ValueError('Dataframe has less than 2 non-NaN rows.')
         self.history_dates = pd.to_datetime(df['ds']).sort_values()
-
         history = self.setup_dataframe(history, initialize_scales=True)
         self.history = history
         self.set_auto_seasonalities()
@@ -1116,7 +1116,7 @@ class Prophet(object):
         self.train_component_cols = component_cols
         self.component_modes = modes
         self.fit_kwargs = deepcopy(kwargs)
-
+        
         self.set_changepoints()
 
         trend_indicator = {'linear': 0, 'logistic': 1, 'flat': 2}
