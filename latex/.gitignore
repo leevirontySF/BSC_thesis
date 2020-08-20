@@ -1,0 +1,7 @@
+*.log
+*.out
+*.fls
+*.aux
+*.toc
+*.xmpdata
+*latexmk
