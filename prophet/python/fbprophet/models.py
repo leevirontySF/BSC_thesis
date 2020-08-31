@@ -207,10 +207,10 @@ class PyStanBackend(IStanBackend):
         return StanBackendEnum.PYSTAN.name
 
     @staticmethod
-    def build_model(target_dir, model_dir):
+    def build_model(target_dir, model_dir, model_name='prophet.stan', target_name='prophet_model.pkl'):
         import pystan
-        model_name = 'prophet.stan'
-        target_name = 'prophet_model.pkl'
+        #model_name = 'prophet.stan'
+        #target_name = 'prophet_model.pkl'
         with open(os.path.join(model_dir, model_name)) as f:
             model_code = f.read()
         sm = pystan.StanModel(model_code=model_code)
