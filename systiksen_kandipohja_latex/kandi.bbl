@@ -1,0 +1,92 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Adida(2006)]{Adida}
+B.~Adida.
+\newblock Advances in cryptographic voting systems.
+\newblock \emph{VTP Working Paper Series}, 51, 2006.
+
+\bibitem[Bardeen et~al.(1957)Bardeen, Cooper, and Schrieffer]{bcs}
+J.~Bardeen, {L.N.} Cooper, and {J.R.} Schrieffer.
+\newblock Theory of superconductivity.
+\newblock \emph{Physical Review}, 108\penalty0 (5):\penalty0 1175--1204, 1957.
+
+\bibitem[Deschamps(1981)]{Deschamps}
+{G.A.} Deschamps.
+\newblock Electromagnetics and differential forms.
+\newblock \emph{Proceedings of the IEEE}, 69\penalty0 (6):\penalty0 676--696,
+  1981.
+
+\bibitem[Kauranen et~al.(2006)Kauranen, Mustakallio, and Palmgren]{Kauranen}
+I.~Kauranen, M.~Mustakallio, and V.~Palmgren.
+\newblock Tutkimusraportin kirjoittamisen opas opinnäytetyön tekijöille,
+  2006.
+
+\bibitem[Kilpel{\"a}inen(2001)]{viittaaminen}
+P~Kilpel{\"a}inen.
+\newblock {WWW}-l{\"a}hteisiin viittaaminen tutkielmatekstiss{\"a}.
+\newblock \emph{Verkkodokumentti}, 2001.
+\newblock P{\"a}ivitetty 26.11.2001. Viitattu 19.1.2007. Saatavissa:
+  \url{http://www.cs.uku.fi/~kilpelai/wwwlahteet.html}.
+
+\bibitem[Koblitz(1994)]{Koblitz}
+N.~Koblitz.
+\newblock \emph{A course in number theory and cryptography}, volume 114.
+\newblock Springer Science \& Business Media, 1994.
+
+\bibitem[Lindblom-Yl{\"a}nne and Wager(2002)]{Lindblom}
+S.~Lindblom-Yl{\"a}nne and M.~Wager.
+\newblock Tieteellisten opinn{\"a}ytet{\"o}iden ohjaaminen.
+\newblock In Lindblom-Yl{\"a}nne S. and Nevgi A., editors, \emph{Yliopisto- ja
+  korkeakouluopettajan k{\"a}sikirja}, pages 314--325. WSOY, Helsinki, 2002.
+
+\bibitem[L{\"o}nnqvist(2006)]{Lonnqvist}
+A.~L{\"o}nnqvist.
+\newblock \emph{Applications of hologram-based compact range: antenna radiation
+  pattern, radar cross section, and absorber reflectivity measurements}.
+\newblock Väitöskirja, Teknillinen korkeakoulu, Espoo, 2006.
+
+\bibitem[Miinusmaa(1977)]{Miinusmaa}
+H.~Miinusmaa.
+\newblock Neliskulmaisen reiän poraamisesta kolmikulmaisella poralla.
+\newblock Diplomityö, Teknillinen korkeakoulu, Espoo, 1977.
+
+\bibitem[Palmgren(2007)]{haastattelu}
+V.~Palmgren.
+\newblock {Suunnittelija. Teknillinen korkeakoulu, kirjasto. Otaniementie 9,
+  02150 Espoo. Haastattelu 15.1.}, 2007.
+
+\bibitem[Pohjois-Koivisto(2005)]{kone}
+T.~Pohjois-Koivisto.
+\newblock Voiko kone tulevaisuudessa arvata tahtosi?
+\newblock \emph{Apropos}, Helmikuu 2005.
+\newblock Viitattu 19.1.2007. Saatavissa:
+  \url{http://www.apropos.fi/1-2005/prima.php}.
+
+\bibitem[Ribeiro et~al.(2006)Ribeiro, Ollila, and Koivunen]{Ribeiro}
+{C.B.} Ribeiro, E.~Ollila, and V.~Koivunen.
+\newblock Stochastic maximum-likelihood method for mimo propagation parameter
+  estimation.
+\newblock \emph{IEEE Transactions on Signal Processing}, 55\penalty0
+  (1):\penalty0 46--55, 2006.
+
+\bibitem[Sihvola et~al.(1998)Sihvola, Tretyakov, Puska, and Kuehl]{Sihvola}
+A.~Sihvola, S.~Tretyakov, P.~Puska, and S.~Kuehl.
+\newblock Interpretation of measurements of helix and bihelix superchiral
+  structures.
+\newblock \emph{Bianisotropics'98}, pages 317--320, 1998.
+
+\bibitem[Stieber(2006)]{Stieber}
+T.~Stieber.
+\newblock Gnupg hacks.
+\newblock \emph{Linux Journal}, 143:\penalty0 2, 2006.
+
+\bibitem[{Suomen standardisoimisliitto}(2004)]{sfs}
+{Suomen standardisoimisliitto}.
+\newblock {SFS} 5342, kirjallisuusviitteiden laatiminen, 2004.
+
+\end{thebibliography}

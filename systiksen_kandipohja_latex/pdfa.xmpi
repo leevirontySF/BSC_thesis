@@ -62,15 +62,14 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:dc="http://purl.org/dc/elements/1.1/"> 
    <dc:format>application/pdf</dc:format> 
-   <dc:title><rdf:Alt><rdf:li xml:lang="x-default">Oikeisiin virheisiin! Virheelliset vastaukset ja niiden tulkinta automaattisesti tarkastetuissa matematiikan harjoitustehtävissä</rdf:li></rdf:Alt></dc:title>
-   <dc:creator><rdf:Seq><rdf:li>Hannu Tiitu</rdf:li></rdf:Seq></dc:creator>
-   <dc:publisher><rdf:Bag><rdf:li>Aalto-yliopisto</rdf:li></rdf:Bag></dc:publisher>
-   <dc:subject><rdf:Bag><rdf:li>oppimisympäristö</rdf:li>
-     <rdf:li>pedagoginen käytettävyys</rdf:li>
-     <rdf:li>virheluokittelu</rdf:li>
-     <rdf:li>automaattinen tarkastaminen</rdf:li>
-     <rdf:li>matematiikan opetus</rdf:li>
-     <rdf:li>Stack</rdf:li></rdf:Bag></dc:subject>
+   <dc:title><rdf:Alt><rdf:li xml:lang="x-default">Bayesian model validation metrics in retail datasets</rdf:li></rdf:Alt></dc:title>
+   <dc:creator><rdf:Seq><rdf:li>Leevi Rönty</rdf:li></rdf:Seq></dc:creator>
+   <dc:rights><rdf:Alt><rdf:li xml:lang="x-default">Copyright © 2020 Leevi Rönty</rdf:li></rdf:Alt></dc:rights>
+   <dc:description><rdf:Alt><rdf:li xml:lang="x-default"> Tiivistelmässä on lyhyt selvitys kirjoituksen tärkeimmästä sisällöstä: mitä ja miten on tutkittu, sekä mitä tuloksia on saatu. Tämän opinnäytteen tiivistelmäteksti kirjoitetaan opinnäytteen luettavan osan lomakkeen lisäksi myös pdf-tiedoston metadataan. Kirjoita tähän metadataan kirjoitettavaa teksti. Metadatatekstissa ei saa olla erikoismerkkejä, rivinvaiho- tai kappaleenjakomerkkiä, joten näitä merkkeja ei saa käyttää tässä. Jos tiivistelmäsi ei sisällä erikoimerkkejä eikä kaipaa kappaleenjakoa, voit hyödynttää makroa abstracttext luodessasi lomakkeen tiivistelmää (katso kommentti alla). Metadatatiivistelmatekstin on muuten oltava sama kuin lomakkeessa oleva teksti. </rdf:li></rdf:Alt></dc:description>
+   <dc:subject><rdf:Bag><rdf:li>Bayesian models</rdf:li>
+     <rdf:li>model validation</rdf:li>
+     <rdf:li>information criterion</rdf:li>
+     <rdf:li>Facebook Prophet</rdf:li></rdf:Bag></dc:subject>
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:prism="http://prismstandard.org/namespaces/basic/2.2/"> 
   </rdf:Description> 
@@ -82,15 +81,17 @@
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/"> 
    <xmp:CreatorTool>LaTeX with hyperref</xmp:CreatorTool> 
-   <xmp:ModifyDate>2020-09-02T13:56:57+03:00</xmp:ModifyDate> 
-   <xmp:CreateDate>2020-09-02T13:56:57+03:00</xmp:CreateDate> 
-   <xmp:MetadataDate>2020-09-02T13:56:57+03:00</xmp:MetadataDate> 
+   <xmp:ModifyDate>2020-09-02T17:11:37+03:00</xmp:ModifyDate> 
+   <xmp:CreateDate>2020-09-02T17:11:37+03:00</xmp:CreateDate> 
+   <xmp:MetadataDate>2020-09-02T17:11:37+03:00</xmp:MetadataDate> 
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpRights = "http://ns.adobe.com/xap/1.0/rights/"> 
+   <xmpRights:Marked>True</xmpRights:Marked>
+   <xmpRights:UsageTerms><rdf:Alt><rdf:li xml:lang="x-default">Copyright © 2020 Leevi Rönty</rdf:li></rdf:Alt></xmpRights:UsageTerms>
   </rdf:Description> 
   <rdf:Description rdf:about="" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"> 
    <xmpMM:DocumentID>uuid:E4A48AB5-7CA3-6712-4FD6-BD3D4CBF3C37</xmpMM:DocumentID> 
-   <xmpMM:InstanceID>uuid:CE1B9F24-D146-18E6-FF38-03D69979A026</xmpMM:InstanceID> 
+   <xmpMM:InstanceID>uuid:1B1E1496-6F82-F4BD-1340-8B96CB73BAEB</xmpMM:InstanceID> 
   </rdf:Description> 
  </rdf:RDF> 
 </x:xmpmeta> 

@@ -1,0 +1,5 @@
+\Title {Bayesian model validation metrics in retail datasets}
+\Author {Leevi Rönty}
+\Copyright {Copyright \copyright \ 2020\ Leevi Rönty}
+\Subject { Tiivistelmässä on lyhyt selvitys kirjoituksen tärkeimmästä sisällöstä: mitä ja miten on tutkittu, sekä mitä tuloksia on saatu. Tämän opinnäytteen tiivistelmäteksti kirjoitetaan opinnäytteen luettavan osan lomakkeen lisäksi myös pdf-tiedoston metadataan. Kirjoita tähän metadataan kirjoitettavaa teksti. Metadatatekstissa ei saa olla erikoismerkkejä, rivinvaiho- tai kappaleenjakomerkkiä, joten näitä merkkeja ei saa käyttää tässä. Jos tiivistelmäsi ei sisällä erikoimerkkejä eikä kaipaa kappaleenjakoa, voit hyödynttää makroa abstracttext luodessasi lomakkeen tiivistelmää (katso kommentti alla). Metadatatiivistelmatekstin on muuten oltava sama kuin lomakkeessa oleva teksti. }
+\Keywords {Bayesian models\sep model validation\sep information criterion\sep Facebook Prophet}

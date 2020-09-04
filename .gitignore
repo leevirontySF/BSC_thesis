@@ -5,3 +5,4 @@
 
 .ipynb_checkpoints/
 .DS_Store
+dataset_A_fitted_models.pkl
