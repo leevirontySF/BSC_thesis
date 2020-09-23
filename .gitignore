@@ -2,6 +2,7 @@
 /aki-gh
 
 /matplotlib
+/latex
 
 .ipynb_checkpoints/
 .DS_Store
