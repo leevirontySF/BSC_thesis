@@ -18,7 +18,6 @@ fit_kwargs = {'adapt_delta': 0.9, 'max_treedepth': 11, 'adapt_kappa': 0.75}
 
 
 def lppd(model, s=None):
-    
     return np.log(np.exp(model.params['log_lik']).mean(axis=0)).sum()
 
 

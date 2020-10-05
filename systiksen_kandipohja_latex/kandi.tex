@@ -525,33 +525,59 @@ hyödynttää makroa $\backslash$abstracttext luodessasi lomakkeen tiivistelmä�
 
 
 %%% Motivaatio ja tausta
-- Yritykset laativat paljon ennusteita
-- Mallien validointi on oleellinen osa prosessia
-- Bayeslaisten mallien validointi on kuitenkin suhteellisen uusi asia
+%- Yritykset laativat paljon ennusteita
+%- Mallien validointi on oleellinen osa prosessia
+%- Bayeslaisten mallien validointi on kuitenkin suhteellisen uusi asia
 
 
 %%% Haasteet ja kirjallisuus
-- Bayeslaisten mallien validoinnin nykytila on "unsatisfactory"
-- Kuhunkin käytetyimmistä menetelmistä liittyy ongelmia
-- Entä jos sakkofunktiona MAPE?
+%- Bayeslaisten mallien validoinnin nykytila on "unsatisfactory"
+%- Kuhunkin käytetyimmistä menetelmistä liittyy ongelmia
+%- Entä jos sakkofunktiona MAPE?
 
 %%% Mitä tehdään
-- Mallinnetaan myyntiä Prophetilla
-- Implementoidaan IC:t prophetille
-- Vertaillaan tuloksia 'ad-hoc' -menetelmiin
+%- Mallinnetaan myyntiä Prophetilla
+%- Implementoidaan IC:t prophetille
+%- Vertaillaan tuloksia 'ad-hoc' -menetelmiin
 
 %%% Työn rakenne
-- Ei välttis pakollinen
+%- Ei välttis pakollinen
+
+Businesses need to forecast a multitude of things to succeed. As companies collect more and more data 
+the possibilities of forecastable subjects and possible features increase dramatically. However, one can't just
+thow more features at a model and except it to perform well. Also not all models are suitable for all 
+forecasting tasks. The amount of possible models is endless, but most of them are bad. To find the usefull ones
+we must be able to measure the goodness of a model.
+
+Model validation is an integral part of a robust modelling framework. Bayesian models are a relatively novel
+model type which has gained a lot of populatiry in recent years as computational power of modern computers 
+has kept rising. As a relatively new method not too many validation metrics have been proposed with these kinds
+of models in mind.
+
+The current state of model validation for bayesian models can be described as "unsatisfactory". Information
+criterions which try to predict out of sample fit can have strong biases and some may not take into consideration
+the nature of bayesian models and distributions of parameters. Cross validation can be computationally extremely
+intensive. Also most information criterions are based on a loss function proportional to the root mean square of errors,
+but that may not always be the most usefull function to optimize for. In some businesses the consecuences of errors
+in forecasts can be described better with the mean absotule percentage error. All in all there does not
+exist a clearly better method for solving all bayesian model validation problems.
+
+In this paper we will model sales timeseries of some Wallmart stores in the United States. We will be using 
+the Facebook's Prophet modelling framework. It consists of a flexible bayesian model which can be customized 
+to fit a wide range of possible time series modelling tasks. We will implement some information criterions 
+for the model and compare it to more ad-hoc methods for model validation. 
+
+
 
 \section{Aikaisempi tutkimus}
 % \section{Background}
 
-Tässä osassa selvitetään, mitä tutkimuksen kohteena olevasta aiheesta tiedetään
-entuudestaan. Selvityksen tulee kattaa tasapainoisesti koko tutkimuskenttä. 
+%Tässä osassa selvitetään, mitä tutkimuksen kohteena olevasta aiheesta tiedetään
+%entuudestaan. Selvityksen tulee kattaa tasapainoisesti koko tutkimuskenttä. 
 
-Kun opinnäytetyötä kirjoitetaan, on noudatettava ohjeita, jotka koskevat
-opinnäytteen rakennetta, käytäntöjä, muotoseikkoja sekä ulkoasua. Esitellään
-näitä ohjeita tarkemmin.
+%Kun opinnäytetyötä kirjoitetaan, on noudatettava ohjeita, jotka koskevat
+%opinnäytteen rakennetta, käytäntöjä, muotoseikkoja sekä ulkoasua. Esitellään
+%näitä ohjeita tarkemmin.
 
 %% Osan hienojaottelua alaosiin, eikä välttämättä edes tarpeen, tässä vain
 %% esimerkkinä. Käytä harkintasi mukaan osan jaottelua, joskus alaotsikot

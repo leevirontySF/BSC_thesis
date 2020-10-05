@@ -6,11 +6,11 @@
 \contentsline {section}{\numberline {2}Aikaisempi tutkimus}{6}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Rakenne}{6}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Sivut ja kirjaintyypit}{7}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Asemointi}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Asemointi}{8}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Numerointi}{8}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Lähdeviittausten käyttö}{8}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Lähdeluettelo}{9}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Muuta huomioitavaa lähdeluettelossa}{12}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.5}Lähdeviittausten käyttö}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Lähdeluettelo}{10}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Muuta huomioitavaa lähdeluettelossa}{13}{subsection.2.7}%
 \contentsline {section}{\numberline {3}Tutkimusaineisto ja -menetelmät}{13}{section.3}%
 \contentsline {section}{\numberline {4}Tulokset}{13}{section.4}%
 \contentsline {section}{\numberline {5}Yhteenveto}{13}{section.5}%
